@@ -65,6 +65,10 @@ ROBOTSTXT_OBEY = False
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
 SCHEDULER_PERSIST = True
 ITEM_PIPELINES = {
    'Article.pipelines.ArticlePipeline': 300,

@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from urllib import parse
 
-import scrapy
-
-
 from scrapy.http import Request
 from Article.items import ArticleItem
 
